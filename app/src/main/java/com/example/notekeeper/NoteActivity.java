@@ -24,6 +24,8 @@ public static final String NOTE_POSITION = "com.example.notekeeper.NOTE_POSITION
     private EditText mTextNoteText;
     private int mNotePosition;
     private boolean mIsCancelling;
+    private String originalNoteCourseId;
+    private String originalNoteCourseId1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,7 @@ public static final String NOTE_POSITION = "com.example.notekeeper.NOTE_POSITION
         mSpinnerCourses.setAdapter(adapterCourses);
 
         readDisplayStateValues();
-
+saveOriginalNoteValues();
         mTextNoteTitle = findViewById(R.id.text_note_title);
         mTextNoteText = findViewById(R.id.text_note_text);
 
@@ -48,6 +50,14 @@ public static final String NOTE_POSITION = "com.example.notekeeper.NOTE_POSITION
         displayNote(mSpinnerCourses, mTextNoteTitle, mTextNoteText);
 
 
+    }
+
+    private void saveOriginalNoteValues() {
+        if (mIsNewNote);
+        return;
+        originalNoteCourseId1 = mNote.getCourse().getCourseId();
+
+        mOriginalNoteTitle = mNote.getTitle();
     }
 
     @Override
