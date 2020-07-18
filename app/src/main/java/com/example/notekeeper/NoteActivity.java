@@ -27,6 +27,8 @@ public static final String NOTE_POSITION = "com.example.notekeeper.NOTE_POSITION
     private String originalNoteCourseId;
     private String originalNoteCourseId1;
     private String mOriginalNoteCourseId;
+    private String mOriginalNoteTitle;
+    private String mOriginalNoteText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,7 @@ saveOriginalNoteValues();
         return;
         mOriginalNoteCourseId = mNote.getCourse().getCourseId();
 mOriginalNoteTitle = mNote.getTitle();
-mOriginalNoteText = mNote.getText();
+    mOriginalNoteText = mNote.getText();
     }
 
     @Override
